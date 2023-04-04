@@ -15,6 +15,26 @@ public class CakeTest {
         assertThat(cake.getTopping()).isEqualTo("ICING");
     }
 
+    @Test
+    public void canSetMessage(){
+        String result = cake.setMessage("Congratulations");
+        assertThat(result).isEqualTo("Congratulations");
+    }
+
+    @Test
+    public void canSetBirthdayMessage(){
+        String result = cake.setBirthdayMessage();
+        assertThat(result).isEqualTo("Happy Birthday!");
+    }
+
+    @Test
+    public void canSetPersonalizedBirthdayMessage(){
+        String result = cake.setBirthdayMessage("Clare");
+        assertThat(result).isEqualTo("Happy Birthday Clare!");
+    }
+
+
+
 
 
 }
